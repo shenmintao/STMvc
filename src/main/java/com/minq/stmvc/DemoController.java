@@ -11,8 +11,8 @@ public class DemoController {
     private IDemoService demoService;
 
     @GPRequestMapping("/query")
-    public void query(HttpServletRequest req, HttpServletResponse resp, @GPRequestParam("name") String name){
-        String result = demoService.get(name);
+    public void query(HttpServletRequest req, HttpServletResponse resp, @GPRequestParam("abc") String abc){
+        String result = demoService.get(abc);
         try {
             resp.getWriter().write(result);
         } catch (IOException e) {
